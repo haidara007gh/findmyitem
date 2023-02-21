@@ -8,7 +8,10 @@ class User(AbstractUser):
     email = models.EmailField()
     
     def __str__(self):
-        return f"Phone: {self.phone_number}, Email: {self.email}"
+        if self.phone_number:
+            return f"{self.phone_number}"
+        else:
+            return f"{self.email}"
     
 class Item(models.Model):
     # url = models.ImageField(upload_to="images/", null=True)
@@ -19,7 +22,7 @@ class Item(models.Model):
     location = models.CharField(max_length=64)
 
     def __str__(self):
-        return f"{self.name}:{self.category},{self.description},{self.location}"
+        return f"{self.name}"
 
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="posted_by", related_name="posts")
