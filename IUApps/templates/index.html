@@ -1,0 +1,17 @@
+{% load static %}
+{% static "images" as img %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>index</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+<head>
+  <body>
+
+    {% block main %}{% endblock %}
+
+  </body>
+</html>

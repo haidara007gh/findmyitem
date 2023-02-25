@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block main %}
+    <h1>Find My Item</h1>
+    <p>Find My Item is a web application that allows users to find their lost items.</p>
+    <p>Users can create an account and post items that they have lost. Other users can then search for items that they have found.</p>  
+
+    <br>
+
+    <a href="{% url 'post' %}"><button>Post</button></a>
+
+
+    <br>
+    
+    <a href="{% url 'search' %}"><button>search</button></a>
+
+<!-- create a login page -->
+
+{% endblock %}

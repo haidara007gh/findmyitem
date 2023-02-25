@@ -12,7 +12,8 @@ class User(AbstractUser):
         return f"{self.id}"
            
 class Item(models.Model):
-    R = "R"
+    #Discussoin
+    R = "R" 
     M = "M"
     F = "F"
     
@@ -28,7 +29,7 @@ class Item(models.Model):
     description = models.CharField(max_length=64)
 
     geolocation = map_fields.GeoLocationField(max_length=100)
-    address = map_fields.AddressField(max_length = 200)
+    address = map_fields.AddressField(max_length = 200) #Discution
     place = models.CharField(max_length=64)
     
     is_taken = models.BooleanField(verbose_name="Action")

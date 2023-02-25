@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
 def index(request):
-    return HttpResponse("Welcome to findmyitem")
+    return render(request, "homePage.html")
+
+def post(request):
+    return render(request, "post_start.html")
+
+def search(request):
+    return render(request, "search_start.html")
