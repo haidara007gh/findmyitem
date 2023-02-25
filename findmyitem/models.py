@@ -7,6 +7,7 @@ from django_google_maps import fields as map_fields
 class User(AbstractUser):
     phone_number = models.CharField(max_length=13)
     email = models.EmailField()
+    #REQUIRED_FIELDS = ['email', 'phone_number']
     
     def __str__(self):
         return f"{self.id}"

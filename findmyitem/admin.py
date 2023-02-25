@@ -5,6 +5,7 @@ from django_google_maps import fields as map_fields
 
 class UserAdmin(admin.ModelAdmin):
     list_display = ("id", "email", "phone_number")
+    fields = ("email", "phone_number")
 
 class ItemAdmin(admin.ModelAdmin):
     list_display = ("id","name","category","description","img_url","address","geolocation","place","status","is_taken")

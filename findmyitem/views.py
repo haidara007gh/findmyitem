@@ -1,11 +1,21 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
-    return render(request, "homePage.html")
+    return render(request, "A_common/HomePage.html")
+
+#--------------------------------------------
 
 def post(request):
-    return render(request, "post_start.html")
+    return render(request, "B_post/1_start.html")
+
+def pSubmit(request):
+    return render(request, "B_post/2_submitting.html")
+
+def pMessage(request):
+    return render(request, "B_post/3_final_message.html")
+
+#--------------------------------------------
 
 def search(request):
-    return render(request, "search_start.html")
+    return render(request, "C_search/q.html")
+
